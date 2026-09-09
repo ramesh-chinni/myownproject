@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>MyShop - E-Commerce Website</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MyShop
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#products">
+                Products
+            </a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+            <a href="#cart">
+                Cart
+                (<span id="cartCount">0</span>)
+            </a>
+
+        </div>
+
+
+        <button
+            id="loginButton"
+            class="login-btn">
+
+            Login
+
+        </button>
+
+    </nav>
+
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        class="hero"
+        id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Shop the Latest Products
+            </h1>
+
+            <p>
+                Quality products at amazing prices.
+            </p>
+
+            <button
+                id="shopNowButton"
+                class="primary-btn">
+
+                Shop Now
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section
+        class="categories"
+        id="categories">
+
+        <h2>
+            Shop by Category
+        </h2>
+
+
+        <div class="category-buttons">
+
+            <button
+                class="category-btn active"
+                data-category="All">
+
+                All
+
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="Men">
+
+                Men
+
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="Women">
+
+                Women
+
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="Shoes">
+
+                Shoes
+
+            </button>
+
+            <button
+                class="category-btn"
+                data-category="Accessories">
+
+                Accessories
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section
+        class="products"
+        id="products">
+
+        <h2>
+            Our Products
+        </h2>
+
+
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products...">
+
+        </div>
+
+
+        <div
+            id="productContainer"
+            class="product-container">
+        </div>
+
+
+        <p
+            id="noProducts"
+            class="no-products">
+
+            No products found.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================= PRODUCT DETAILS ================= -->
+
+    <section
+        id="productDetails"
+        class="product-details">
+
+        <div class="details-container">
+
+
+            <div class="details-image-container">
+
+                <img
+                    id="detailsImage"
+                    src=""
+                    alt="Product">
+
+            </div>
+
+
+            <div class="details-info">
+
+                <p
+                    id="detailsCategory"
+                    class="details-category">
+                </p>
+
+
+                <h2 id="detailsName">
+                </h2>
+
+
+                <p id="detailsRating">
+                </p>
+
+
+                <h3 id="detailsPrice">
+                </h3>
+
+
+                <p id="detailsDescription">
+                </p>
+
+
+                <button
+                    id="detailsAddCart"
+                    class="primary-btn">
+
+                    Add to Cart
+
+                </button>
+
+
+                <button
+                    id="backToProducts"
+                    class="secondary-btn">
+
+                    Back to Products
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CART ================= -->
+
+    <section
+        id="cart"
+        class="cart-section">
+
+        <h2>
+            Your Cart
+        </h2>
+
+
+        <div
+            id="cartContainer"
+            class="cart-container">
+        </div>
+
+
+        <div class="cart-bottom">
+
+            <h3>
+
+                Total:
+                ₹<span id="cartTotal">0</span>
+
+            </h3>
+
+
+            <button
+                id="checkoutButton"
+                class="checkout-btn">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <section
+        id="checkout"
+        class="checkout-section">
+
+        <h2>
+            Checkout
+        </h2>
+
+
+        <div class="checkout-container">
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="customer-box">
+
+                <h3>
+                    Customer Details
+                </h3>
+
+
+                <form id="checkoutForm">
+
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Full Name"
+                        required>
+
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        placeholder="Email"
+                        required>
+
+
+                    <input
+                        type="tel"
+                        id="customerPhone"
+                        placeholder="Phone Number"
+                        required>
+
+
+                    <textarea
+                        id="customerAddress"
+                        placeholder="Delivery Address"
+                        required>
+                    </textarea>
+
+
+                    <button
+                        type="submit"
+                        class="place-order-btn">
+
+                        Place Order
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="order-summary">
+
+                <h3>
+                    Order Summary
+                </h3>
+
+
+                <div
+                    id="checkoutItems">
+                </div>
+
+
+                <div class="checkout-total">
+
+                    Total:
+                    ₹<span id="checkoutTotal">0</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= LOGIN ================= -->
+
+    <section
+        id="auth"
+        class="auth-section">
+
+        <div class="auth-box">
+
+            <h2 id="authTitle">
+                Login
+            </h2>
+
+
+            <form id="authForm">
+
+
+                <input
+                    type="text"
+                    id="authName"
+                    placeholder="Full Name">
+
+
+                <input
+                    type="email"
+                    id="authEmail"
+                    placeholder="Email"
+                    required>
+
+
+                <input
+                    type="password"
+                    id="authPassword"
+                    placeholder="Password"
+                    required>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p id="authSwitch">
+
+                Don't have an account?
+
+                <span id="switchAuth">
+                    Register
+                </span>
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <div>
+
+                <h3>
+                    MyShop
+                </h3>
+
+                <p>
+                    Simple online shopping website.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#cart">
+                    Cart
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    support@myshop.com
+                </p>
+
+                <p>
+                    +91 98765 43210
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 MyShop. All rights reserved.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+         <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

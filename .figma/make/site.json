@@ -1,0 +1,10 @@
+{
+  "description": "A modern, user-friendly e-commerce platform tailored for young adults offering seamless browsing, shopping, and checkout across all devices.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
