@@ -10,6 +10,7 @@ import RegisterPage from "./pages/RegisterPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
 import OrdersPage from "./pages/OrdersPage";
+import ChatWidget from "./components/ChatWidget";
 
 function AppContent() {
   const { page } = useApp();
@@ -39,6 +40,7 @@ function AppContent() {
         {page === "orders" && <OrdersPage />}
       </div>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }
